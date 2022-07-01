@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2022 Anthropos Labs, Inc.
  *
@@ -7,7 +6,10 @@
  * You may obtain a copy of the License here:
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
+package main
 
-package fsm
+import "r3t.io/pleiades/cmd"
 
-// https://github.com/hashicorp/go-memdb
+func main() {
+	cmd.Execute()
+}
