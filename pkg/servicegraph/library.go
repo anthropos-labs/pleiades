@@ -8,7 +8,7 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package servicelib
+package servicegraph
 
 import (
 	"fmt"

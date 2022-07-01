@@ -8,7 +8,7 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package servicelib
+package servicegraph
 
 import (
 	"gonum.org/v1/gonum/graph"
@@ -30,7 +30,6 @@ type Service interface {
 	SetNodeID(nid int64)
 	GetServiceName() string
 	GetServiceType() LifecycleServiceType
-	MarkDependencies(deps []Service) error
 	GetDependencies() []Service
 	PrepareToRun() error
 	ReadyToRun() bool
