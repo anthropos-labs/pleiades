@@ -15,10 +15,10 @@ import (
 	"context"
 	"testing"
 
+	"a13s.io/pleiades/pkg/services/v1/config"
+	"a13s.io/pleiades/pkg/utils"
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/suite"
-	"r3t.io/pleiades/pkg/services/v1/config"
-	"r3t.io/pleiades/pkg/utils"
 )
 
 func TestStreamManager(t *testing.T) {

@@ -13,11 +13,11 @@ import (
 	"context"
 	"errors"
 
+	"a13s.io/pleiades/pkg/fsm"
+	configv1 "a13s.io/pleiades/pkg/protocols/v1/config"
+	"a13s.io/pleiades/pkg/services"
 	"capnproto.org/go/capnp/v3"
 	"github.com/rs/zerolog"
-	"r3t.io/pleiades/pkg/fsm"
-	configv1 "r3t.io/pleiades/pkg/protocols/v1/config"
-	"r3t.io/pleiades/pkg/services"
 )
 
 var (

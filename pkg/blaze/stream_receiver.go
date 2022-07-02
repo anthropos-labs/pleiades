@@ -12,12 +12,12 @@ package blaze
 import (
 	"context"
 
+	configv1 "a13s.io/pleiades/pkg/protocols/v1/config"
+	"a13s.io/pleiades/pkg/services/v1/config"
 	"capnproto.org/go/capnp/v3/rpc"
 	"capnproto.org/go/capnp/v3/server"
 	"github.com/lucas-clemente/quic-go"
 	"github.com/rs/zerolog"
-	configv1 "r3t.io/pleiades/pkg/protocols/v1/config"
-	"r3t.io/pleiades/pkg/services/v1/config"
 )
 
 const (

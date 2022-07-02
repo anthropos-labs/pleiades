@@ -18,9 +18,9 @@ import (
 	"testing"
 	"time"
 
+	"a13s.io/pleiades/pkg/utils"
 	"github.com/lucas-clemente/quic-go"
 	"github.com/rs/zerolog"
-	"r3t.io/pleiades/pkg/utils"
 )
 
 const (

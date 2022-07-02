@@ -22,7 +22,7 @@ package blaze
 //	"github.com/lucas-clemente/quic-go"
 //	"github.com/rs/zerolog"
 //	"github.com/stretchr/testify/suite"
-//	"r3t.io/pleiades/pkg/blaze/testdata"
+//	"a13s.io/pleiades/pkg/blaze/testdata"
 //)
 //
 //func TestFunctional(t *testing.T) {

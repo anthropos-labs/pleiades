@@ -8,7 +8,7 @@
  */
 package main
 
-import "r3t.io/pleiades/cmd"
+import "a13s.io/pleiades/cmd"
 
 func main() {
 	cmd.Execute()

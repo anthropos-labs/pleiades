@@ -16,15 +16,15 @@ import (
 	"net"
 	"testing"
 
+	"a13s.io/pleiades/pkg/fsm"
+	configv1 "a13s.io/pleiades/pkg/protocols/v1/config"
+	"a13s.io/pleiades/pkg/services"
+	"a13s.io/pleiades/pkg/utils"
 	"capnproto.org/go/capnp/v3"
 	"capnproto.org/go/capnp/v3/rpc"
 	"capnproto.org/go/capnp/v3/server"
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/suite"
-	"r3t.io/pleiades/pkg/fsm"
-	configv1 "r3t.io/pleiades/pkg/protocols/v1/config"
-	"r3t.io/pleiades/pkg/services"
-	"r3t.io/pleiades/pkg/utils"
 )
 
 func TestConfigService(t *testing.T) {
