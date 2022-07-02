@@ -14,7 +14,7 @@ import (
 	"errors"
 	"reflect"
 
-	v1 "a13s.io/pleiades/pkg/protocols/v1/config"
+	v1 "a13s.io/pleiades/pkg/protocols/v1/host"
 	services2 "a13s.io/pleiades/pkg/services"
 	"capnproto.org/go/capnp/v3"
 	"github.com/rs/zerolog"
