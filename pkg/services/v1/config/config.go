@@ -11,12 +11,12 @@ package config
 
 import (
 	"context"
-	"errors"
 
 	"a13s.io/pleiades/pkg/fsm"
 	hostv1 "a13s.io/pleiades/pkg/protocols/v1/host"
 	"a13s.io/pleiades/pkg/services"
 	"capnproto.org/go/capnp/v3"
+	"github.com/cockroachdb/errors"
 	"github.com/rs/zerolog"
 )
 
