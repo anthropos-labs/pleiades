@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"a13s.io/pleiades/pkg/utils"
+	"gitlab.com/anthropos-labs/pleiades/pkg/utils"
 	"github.com/lucas-clemente/quic-go"
 	"github.com/rs/zerolog"
 )

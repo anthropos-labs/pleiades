@@ -8,7 +8,7 @@
  */
 package main
 
-import "a13s.io/pleiades/cmd"
+import "gitlab.com/anthropos-labs/pleiades/cmd"
 
 func main() {
 	cmd.Execute()
