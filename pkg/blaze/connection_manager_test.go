@@ -15,8 +15,8 @@ import (
 	"context"
 	"testing"
 
-	"gitlab.com/anthropos-labs/pleiades/pkg/services/v1/config"
-	"gitlab.com/anthropos-labs/pleiades/pkg/utils"
+	"a13s.io/pleiades/pkg/services/v1/config"
+	"a13s.io/pleiades/pkg/utils"
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/suite"
 )
