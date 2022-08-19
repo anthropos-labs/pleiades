@@ -14,7 +14,7 @@
 
 syntax = "proto3";
 package database;
-option go_package = "./database";
+option go_package = "a13s.io/pleiades/api/v1/database";
 
 import "api/v1/database/session.proto";
 
