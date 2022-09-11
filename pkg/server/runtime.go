@@ -12,7 +12,7 @@ package server
 import (
 	"context"
 
-	"a13s.io/pleiades/pkg/conf"
+	"a13s.io/pleiades/pkg/configuration"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/host"
@@ -28,7 +28,7 @@ import (
 )
 
 func init() {
-	dlog.SetLoggerFactory(conf.DragonboatLoggerFactory)
+	dlog.SetLoggerFactory(configuration.DragonboatLoggerFactory)
 }
 
 type Runtime struct {
