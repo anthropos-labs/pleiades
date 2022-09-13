@@ -8,7 +8,7 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package conf
+package configuration
 
 import (
 	"net"

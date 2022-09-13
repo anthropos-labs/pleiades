@@ -7,7 +7,7 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package conf
+package configuration
 
 type NodeHostConfig struct {
 	DevMode                       bool         `flag:"dev d" desc:"enable dev mode?"`
