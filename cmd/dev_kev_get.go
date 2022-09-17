@@ -12,9 +12,8 @@ import (
 	"context"
 	"time"
 
-	"a13s.io/pleiades/api/v1/database"
+	kvstorev1 "a13s.io/api/kvstore/v1"
 	"a13s.io/pleiades/pkg/configuration"
-	"a13s.io/pleiades/pkg/server"
 	"github.com/golang/protobuf/proto"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -62,10 +61,10 @@ func getKey(cmd *cobra.Command, args []string) {
 		logger.Fatal().Err(err).Msg("error dialing server")
 	}
 
-	client := server.NewKVStoreServiceClient(conn)
+	client := kvstorev1.NewKvStoreServiceClient(conn)
 
 	logger.Info().Str("key", key).Msg("getting key")
-	descriptor, err := client.GetKey(context.Background(), &database.GetKeyRequest{
+	descriptor, err := client.GetKey(context.Background(), &kvstorev1.GetKeyRequest{
 		AccountId:  accountId,
 		BucketName: bucketName,
 		Key:        key,

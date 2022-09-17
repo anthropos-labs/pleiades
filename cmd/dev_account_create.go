@@ -12,9 +12,8 @@ import (
 	"context"
 	"time"
 
-	"a13s.io/pleiades/api/v1/database"
+	kvstorev1 "a13s.io/api/kvstore/v1"
 	"a13s.io/pleiades/pkg/configuration"
-	"a13s.io/pleiades/pkg/server"
 	"github.com/golang/protobuf/proto"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -60,10 +59,10 @@ func createAccount(cmd *cobra.Command, args []string) {
 		logger.Fatal().Err(err).Msg("error dialing server")
 	}
 
-	client := server.NewKVStoreServiceClient(conn)
+	client := kvstorev1.NewKvStoreServiceClient(conn)
 
 	logger.Info().Uint64("account-id", accountId).Msg("creating account")
-	descriptor, err := client.CreateAccount(context.Background(), &database.CreateAccountRequest{AccountId: accountId, Owner: accountOwner})
+	descriptor, err := client.CreateAccount(context.Background(), &kvstorev1.CreateAccountRequest{AccountId: accountId, Owner: accountOwner})
 	if err != nil {
 		logger.Fatal().Err(err).Uint64("account-id", accountId).Msg("can't create account")
 	}
