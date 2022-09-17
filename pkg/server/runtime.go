@@ -10,6 +10,7 @@
 package server
 
 import (
+	kvstorev1 "a13s.io/api/kvstore/v1"
 	raftv1 "a13s.io/api/raft/v1"
 	"a13s.io/pleiades/pkg/configuration"
 	"github.com/cockroachdb/errors"
@@ -70,7 +71,7 @@ func New(nhc dconfig.NodeHostConfig, gServer *grpc.Server, logger zerolog.Logger
 		logger:             logger,
 		transactionManager: tm,
 	}
-	RegisterTransactionsServer(gServer, tmAdapter)
+	kvstorev1.RegisterTransactionsServiceServer(gServer, tmAdapter)
 	srv.raftTransactionManager = tm
 
 	store := newBboltStoreManager(tm, nh, logger)
@@ -78,7 +79,7 @@ func New(nhc dconfig.NodeHostConfig, gServer *grpc.Server, logger zerolog.Logger
 		logger:       logger,
 		storeManager: store,
 	}
-	RegisterKVStoreServiceServer(gServer, storeAdapter)
+	kvstorev1.RegisterKvStoreServiceServer(gServer, storeAdapter)
 	srv.bboltStoreManager = store
 
 	srv.nh = nh
