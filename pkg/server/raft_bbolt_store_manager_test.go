@@ -17,10 +17,10 @@ import (
 	"time"
 
 	kvstorev1 "a13s.io/api/kvstore/v1"
+	"a13s.io/pleiades/pkg/configuration"
 	"a13s.io/pleiades/pkg/utils"
 	"github.com/lni/dragonboat/v3"
 	"github.com/rs/zerolog"
-	"github.com/spf13/viper"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -49,7 +49,7 @@ func (t *bboltStoreManagerTestSuite) SetupSuite() {
 	t.sm = newShardManager(t.nh, t.logger)
 
 	// ensure that bbolt uses the temp directory
-	viper.SetDefault("datastore.basePath", t.T().TempDir())
+	configuration.Get().SetDefault("server.datastore.dataDir", t.T().TempDir())
 
 	// shardLimit+1
 	var wg sync.WaitGroup
