@@ -7,17 +7,16 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package server
+package shard
 
 import (
+	"a13s.io/pleiades/pkg/server/runtime"
 	"github.com/cockroachdb/errors"
 )
 
-type StateMachineType uint64
-
 const (
-	testStateMachineType StateMachineType = 0
-	BBoltStateMachineType StateMachineType = 1
+	testStateMachineType  runtime.StateMachineType = 0
+	BBoltStateMachineType runtime.StateMachineType = 1
 )
 
 var (

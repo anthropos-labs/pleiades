@@ -7,7 +7,7 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package utils
+package serverutils
 
 import (
 	"encoding/binary"

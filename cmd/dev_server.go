@@ -20,6 +20,7 @@ import (
 
 	"a13s.io/pleiades/pkg/configuration"
 	"a13s.io/pleiades/pkg/server"
+	"a13s.io/pleiades/pkg/server/shard"
 	"a13s.io/pleiades/pkg/utils"
 	dconfig "github.com/lni/dragonboat/v3/config"
 	"github.com/rs/zerolog/log"
@@ -132,7 +133,7 @@ func startServer(cmd *cobra.Command, args []string) {
 		go func() {
 			wg.Add(1)
 			defer wg.Done()
-			err = s.GetRaftShardManager().NewShard(i, i*257, server.BBoltStateMachineType, 300*time.Millisecond)
+			err = s.GetRaftShardManager().NewShard(i, i*257, shard.BBoltStateMachineType, 300*time.Millisecond)
 		}()
 		utils.Wait(100 * time.Millisecond)
 	}
