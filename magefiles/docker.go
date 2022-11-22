@@ -7,6 +7,8 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
+//go:build mage
+
 package main
 
 import (
