@@ -7,12 +7,8 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package fsm
+package eventing
 
 const (
-
-	// ref: https://go.dev/play/p/hvhaWYwufx1
-	dbDirModeVal  int = 484
-
-	ShardConfigBucket string = "shards"
+	ShardConfigStream string = "system.raftv1.shard-config"
 )
