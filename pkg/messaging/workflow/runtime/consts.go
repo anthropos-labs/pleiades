@@ -7,13 +7,8 @@
  *  https://gitlab.com/anthropos-labs/pleiades/-/blob/mainline/LICENSE
  */
 
-package fsm
+package runtime
 
 const (
-
-	// ref: https://go.dev/play/p/hvhaWYwufx1
-	dbDirModeVal int = 484
-
-	ShardConfigBucket   string = "shards"
 	WorkflowStateBucketFormat string = "workflow-%s-%s"
 )

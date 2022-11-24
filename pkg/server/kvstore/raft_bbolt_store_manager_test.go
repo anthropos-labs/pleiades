@@ -20,6 +20,7 @@ import (
 	raftv1 "a13s.io/api/raft/v1"
 	"a13s.io/pleiades/pkg/configuration"
 	"a13s.io/pleiades/pkg/messaging"
+	runtime2 "a13s.io/pleiades/pkg/messaging/clients"
 	"a13s.io/pleiades/pkg/server/runtime"
 	"a13s.io/pleiades/pkg/server/serverutils"
 	"a13s.io/pleiades/pkg/server/shard"
@@ -45,7 +46,7 @@ type bboltStoreManagerTestSuite struct {
 	nh             *dragonboat.NodeHost
 	defaultTimeout time.Duration
 	nats           *messaging.EmbeddedMessaging
-	client         *messaging.EmbeddedMessagingStreamClient
+	client         *runtime2.EmbeddedMessagingStreamClient
 }
 
 func (t *bboltStoreManagerTestSuite) SetupSuite() {
